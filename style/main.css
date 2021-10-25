@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+/* criando varieveis no css
+ */
+:root{
+    --vermelho:#E50914;
+    --preto:#141414;
+}
+
+/* retirando as formatações padrão do navegador */
+*{
+    margin:0;
+    padding: 0;
+    /* o box size:  serve paar deixar a borda no tamanho que definires, mesmo que tenha varios elementos nele ele não vai mudar; */
+    box-sizing: border-box;
+}
+/*Elementos base*/
+body{
+    background: var(--preto);
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo{
+    color: var(--vermelho);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: rgb(184, 180, 180);
+    margin-right: 10px;
+}
+/* destacar conteudo selecionado */
+header nav a:hover{
+    color:#fff;
+}
+/*Filme principal*/
+.principal{
+    font-size: 16px;
+    /* adicionar fundo transparente */
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url("../img/capa-house.jpg");
+
+    height: 400px;
+    background-size:cover;
+
+    display: flex;
+    flex-direction: column;
+/* alinhando os elementos no principio */
+    justify-content: center;
+    align-items: flex-start;
+}
+/* selecao do botao */
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+.botao{
+    background-color:rgba(0,0,0,.50) ;
+    border: none;
+    color:white;
+    margin: 10px;
+
+    padding: 15px;
+    font-size: 12px;
+    cursor: pointer;
+
+    /* animação do botao */
+    transition: .3s ease all;
+    border-radius: 2%;
+}
+.principal .description{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding: 9px;
+}
+.titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    padding: 9px;
+}
+
+.botao i{
+    margin-right: 5px;
+}
+.container{
+    padding: 9px;
+}
+.principal .container{
+    width: 80%;
+}
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 4px;
+}
